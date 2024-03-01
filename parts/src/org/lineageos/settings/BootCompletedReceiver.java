@@ -24,6 +24,7 @@ import android.util.Log;
 
 import org.lineageos.settings.thermal.ThermalUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
+import org.lineageos.settings.dirac.DiracUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
     private static final boolean DEBUG = false;
@@ -33,7 +34,18 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     public void onReceive(final Context context, Intent intent) {
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
+
+        // Dirac
+        try {
+            DiracUtils.getInstance(context);
+        } catch (Exception e) {
+            Log.d(TAG, "Dirac is not present in system");
+        }
+
+        // Thermal Profiles
         ThermalUtils.startService(context);
+
+        // Per-App-RR
         RefreshUtils.startService(context);        
     }
 }
