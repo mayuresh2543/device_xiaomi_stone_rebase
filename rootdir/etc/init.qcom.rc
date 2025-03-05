@@ -226,9 +226,6 @@ on post-fs-data
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system drmrpc
 
-    #Create dir for dolby
-    mkdir /data/vendor/dolby 0770 media media
-
     # Allow system to modify fastcharge nodes
     chown system system /sys/kernel/fastchgtoggle/mode
     chmod 0660 /sys/kernel/fastchgtoggle/mode
