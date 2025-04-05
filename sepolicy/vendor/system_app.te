@@ -1,0 +1,2 @@
+# Fastcharge
+allow system_app vendor_sysfs_fastcharge:file { getattr open read write };
