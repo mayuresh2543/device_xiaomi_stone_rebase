@@ -58,3 +58,4 @@ genfscon sysfs /devices/platform/soc/soc:qcom_wt_chg/wakeup u:object_r:sysfs_wak
 # Fastcharge
 genfscon sysfs /sys/kernel/fast_charge/force_fast_charge u:object_r:vendor_sysfs_fastcharge:s0
 genfscon sysfs /sys/kernel/fastchgtoggle/mode u:object_r:vendor_sysfs_fastcharge:s0
+genfscon sysfs /sys/kernel/fastchgtoggle/thermals u:object_r:vendor_sysfs_fastcharge:s0
