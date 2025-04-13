@@ -236,6 +236,8 @@ on post-fs-data
     chmod 0660 /sys/kernel/fastchgtoggle/thermals
     chown system system /sys/kernel/fast_charge/force_fast_charge
     chmod 0660 /sys/kernel/fast_charge/force_fast_charge
+    chown system system /sys/class/qcom-battery/input_suspend
+    chmod 0660 /sys/class/qcom-battery/input_suspend
 
 on property:sys.boot_completed=1
     #Enable UFS clock scaling back
