@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/kamis_stuff_title">
+
+    <Preference
+        android:key="fast_charge"
+        android:title="@string/fastcharge_title"
+        android:summary="@string/fastcharge_summary"
+        android:icon="@drawable/ic_fast_charge" />
+
+</PreferenceScreen>

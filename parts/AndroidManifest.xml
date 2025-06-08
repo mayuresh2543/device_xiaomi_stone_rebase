@@ -44,6 +44,23 @@
         </receiver>
 
         <activity
+            android:name=".kamisstuff.KamisStuffActivity"
+            android:label="@string/kamis_stuff_title">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.system" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/kamis_stuff_summary" />
+            <meta-data
+        	android:name="com.android.settings.icon"
+        	android:resource="@drawable/ic_kami" />
+        </activity>
+
+        <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title">
             <intent-filter>
@@ -63,7 +80,7 @@
         </service>
 
         <activity
-            android:name=".speaker.ClearSpeakerActivity" 
+            android:name=".speaker.ClearSpeakerActivity"
             android:label="@string/clear_speaker_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
