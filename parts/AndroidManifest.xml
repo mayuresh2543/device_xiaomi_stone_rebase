@@ -24,6 +24,8 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
 
     <uses-sdk
         android:minSdkVersion="24"
@@ -78,6 +80,11 @@
             android:name=".thermal.ThermalService"
             android:permission="ThermalService">
         </service>
+
+        <activity
+    	    android:name=".useless.UselessActivity"
+    	    android:label="@string/useless_mode_title"
+    	    android:exported="false" />
 
         <activity
             android:name=".speaker.ClearSpeakerActivity"
