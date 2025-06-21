@@ -21,15 +21,15 @@ import android.os.Bundle;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragment;
 import org.lineageos.settings.R;
-import org.lineageos.settings.corecontrol.CoreControlActivity;
 import org.lineageos.settings.fastcharge.FastChargeActivity;
-import org.lineageos.settings.zram.ZramActivity;
 import org.lineageos.settings.useless.UselessActivity;
+import org.lineageos.settings.kernelmanager.KernelManagerActivity;
 
 public class KamisStuffFragment extends PreferenceFragment {
 
     private static final String KEY_FAST_CHARGE = "fast_charge";
     private static final String KEY_USELESS = "useless";
+    private static final String KEY_KERNEL_MANAGER = "kernel_manager";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -50,6 +50,16 @@ public class KamisStuffFragment extends PreferenceFragment {
         if (uselessPref != null) {
             uselessPref.setOnPreferenceClickListener(preference -> {
                 Intent intent = new Intent(getActivity(), UselessActivity.class);
+                startActivity(intent);
+                return true;
+            });
+        }
+
+        // Kernel Manager preference
+        Preference kernelManagerPref = findPreference(KEY_KERNEL_MANAGER);
+        if (kernelManagerPref != null) {
+            kernelManagerPref.setOnPreferenceClickListener(preference -> {
+                Intent intent = new Intent(getActivity(), KernelManagerActivity.class);
                 startActivity(intent);
                 return true;
             });
