@@ -11,6 +11,12 @@ prebuilt_etc {
     vendor_ramdisk_available: true,
 }
 
+sh_binary {
+    name: "init.class_main.sh",
+    src: "bin/init.class_main.sh",
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "init.device.rc",
     src: "etc/init.device.rc",
